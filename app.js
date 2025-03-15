@@ -9,7 +9,7 @@ function calculateFare(event) {
   const baseFare = parseFloat(document.getElementById('base-fare').value);
   const airportSurcharge = parseFloat(document.getElementById('airport-surcharge').value);
 
-  const serviceKey = 'YOUR_GOOGLE_API_KEY'; // Replace with your Google API Key
+  const serviceKey = 'AIzaSyC3mX1gK2pQb_f_sRR-zNQl_Y-9ScghCnQ'; // Replace with your Google API Key
 
   const url = `https://maps.googleapis.com/maps/api/distancematrix/json?origins=${pickUp}&destinations=${dropOff}&key=${serviceKey}`;
   
