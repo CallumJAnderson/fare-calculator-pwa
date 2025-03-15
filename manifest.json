@@ -1,0 +1,20 @@
+{
+  "name": "Fare Calculator",
+  "short_name": "FareCalc",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "A simple fare calculator for private hire services.",
+  "icons": [
+    {
+      "src": "images/icons/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icons/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fare Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <h1>Fare Calculator</h1>
+  
+  <form id="fare-form">
+    <label for="pick-up">Pick-Up Address:</label>
+    <input type="text" id="pick-up" placeholder="Enter Pick-Up Address" required>
+    <br>
+    
+    <label for="drop-off">Drop-Off Address:</label>
+    <input type="text" id="drop-off" placeholder="Enter Drop-Off Address" required>
+    <br>
+    
+    <label for="multiplier">Fare Multiplier:</label>
+    <input type="number" id="multiplier" value="1" required>
+    <br>
+    
+    <label for="base-fare">Base Fare (£):</label>
+    <input type="number" id="base-fare" value="10" required>
+    <br>
+    
+    <label for="airport-surcharge">Airport Surcharge (£):</label>
+    <input type="number" id="airport-surcharge" value="5">
+    <br>
+    
+    <button type="submit">Calculate Fare</button>
+  </form>
+  
+  <div id="result">
+    <h2>Estimated Fare: £<span id="total-fare">0.00</span></h2>
+    <p id="travel-time"></p>
+    <p id="travel-distance"></p>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then((registration) => {
+          console.log('Service Worker registered with scope:', registration.scope);
+        })
+        .catch((error) => {
+          console.log('Service Worker registration failed:', error);
+        });
+    }
+  </script>
+</body>
+</html>
